@@ -1,8 +1,9 @@
+/////////////////////////////////////////////////////////////////* HTML *//////////////////////////////////////////////////////////////////////////////////////
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <title>T1L7</title>
@@ -11,9 +12,9 @@
 
     <!-- HOME -->
     <section id="home" >
-        <div class="container">
+        <div class="home-container">
             <img src="/img/logo.png" alt="" class="logo" >
-            <div class="info-box-home">
+            <div class="info-box-homes">
                 <h1>The purpose is to <br> teach, bring learning to <br> people</h1>
                 <span class="square"></span>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam 
@@ -72,19 +73,19 @@
     </section>
     
     <!-- FEATURES -->
-    <section id="features">
-        <div class="features-row">
-            <div class="features-col">
+    <section id="feature">
+        <div class="feature-row">
+            <div class="feature-col">
                 <img src="/img/pic-1.png" alt="">
                 <h5>Learn Anywhere</h5>
                 <p>Lorem ipsum dolor, sit amet consectetur <br> adipisicing elit.</p>
             </div>
-            <div class="features-col">
+            <div class="feature-col">
                 <img src="/img/pic-2.png" alt="">
                 <h5>Learn Anywhere</h5>
                 <p>Lorem ipsum dolor, sit amet consectetur <br> adipisicing elit.</p>
             </div>
-            <div class="features-col">
+            <div class="feature-col">
                 <img src="/img/pic-3.png" alt="">
                 <h5>Learn Anywhere</h5>
                 <p>Lorem ipsum dolor, sit amet consectetur <br> adipisicing elit.</p>
@@ -150,7 +151,7 @@
 
     <!-- CONTACT -->
     <section id="contact">
-        <div class="container">
+        <div class="contact-container">
             <div class="left-col-contact">
                 <h1>Sign Up to join our <br>learning community</h1>
                 <form>
@@ -175,27 +176,54 @@
     </section>
 
     <!-- FOOTER -->
-
-
-    <!-- SCRIPT -->
-    <script>
-        var menuBtn = document.getElementById("menuBtn");
-        var sideNav = document.getElementById("sideNav");
-
-        sideNav.style.right = "-250px";
-        menuBtn.onclick = function(){
-            if(sideNav.style.right == "-250px"){
-                sideNav.style.right = "0";
-            }
-            else{
-                sideNav.style.right = "-250px";
-            }
-        }
-    </script>
-
-
-</body>
-</html>
+    <section id="footer">
+        <div class="footer-row">
+            <hr>
+            <div class="footer-left-col">
+                <div class="footer-links">
+                    <div class="link-title">
+                        <h3>Product</h3>
+                        <small>Our Plan</small><br>
+                        <small>Free Trial</small>
+                    </div>
+                    <div class="link-title">
+                        <h3>About Us</h3>
+                        <small>Request Demo</small><br>
+                        <small>FAQs</small>
+                    </div>
+                    <div class="link-title">
+                        <h3>Support</h3>
+                        <small>Features</small><br>
+                        <small>Contact Us</small>
+                    </div>
+                    <div class="link-title">
+                        <h3>Explore</h3>
+                        <small>Find Nonprofits</small><br>
+                        <small>Corporate Solutions</small>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-right-col">
+                <div class="footer-right-info">
+                    <div class="copyright-text">
+                        <small>support@Xypo.com</small><br>
+                        <small>copyright2020</small>
+                    </div>
+                    <div class="footer-logo">
+                        <img src="/img/logo.png" alt="">
+                        <button type="button">Spanish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SOCIAL ICONS -->
+    <div class="social-icons">
+        <img src="/img/facebook.png" alt="">
+        <img src="/img/instagram.png" alt="">
+        <img src="/img/twitter.png" alt="">
+        <img src="/img/linkedin.png" alt="">
+    </div>
 
 
 /////////////////////////////////////////////////////////////////* CSS *//////////////////////////////////////////////////////////////////////////////////////
@@ -215,8 +243,8 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-.container{
-    background: rgba(173, 245, 255, 0.507);
+.home-container{
+    /* background: rgba(170, 7, 162, 0.507); */
     width: 80%;
     height: 100vh;
     margin: auto;
@@ -226,10 +254,10 @@
     margin-top: 50px;
     margin-left: 100px;
 }
-.info-box-home{
+.info-box-homes{
     /* background: rgba(173, 245, 255, 0.507); */
     height: 50vh;
-    max-width: 35%;
+    max-width: 350px;
     margin-top: 10vh;
 }
 h1{
@@ -240,6 +268,10 @@ h2{
     font-size: 30px;
     line-height: 40px;
     font-style: italic;
+}
+h3{
+    color: #f67c92;
+    margin-bottom: 20px;
 }
 h4{
     font-size: 20px;
@@ -256,6 +288,10 @@ p{
     color: #777;
     line-height: 20px;
     font-size: 16px;
+}
+small{
+    font-size: 20px;
+    color: #777;
 }
 button{
     padding: 25px 50px;
@@ -327,12 +363,14 @@ nav ul li a{
 
 
 /* ABOUT */
+
 #about, #offers{
     /* background: rgba(173, 245, 255, 0.507); */
     padding: 100px 0;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    
 }
 .left-col-about{
     /* background: rgba(173, 245, 255, 0.507); */
@@ -364,21 +402,28 @@ nav ul li a{
 
 
 /* FEATURES */
-.features-row{
-    /* background: rgba(196, 255, 173, 0.507); */
+#feature{
+    background: #e2e2e262;
+    width: 100%;
+    height: 40vh;
+    margin: 100px 0px;
+}
+.feature-row{
+    background: rgba(196, 255, 173, 0.507);
     width: 80%;
-    height: 25vh;
+    height: 40vh;
     margin: auto;
     display: flex;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
-.features-col{
-    /* background: rgba(196, 255, 173, 0.507); */
-    flex-basis: 33.30%;
+.feature-col{
+    background: rgba(196, 255, 173, 0.507);
     text-align: center;
+    flex-basis: 10%;
 }
-.features-col img{
-    width: 130px;
+.feature-col img{
+    width: 60px;
     cursor: pointer;
 }
 .feature-elements{
@@ -427,13 +472,14 @@ nav ul li a{
 
 
 /* CONTACT */
-.container{
-    /* background: rgba(196, 255, 173, 0.507); */
+.contact-container{
+    /* background: rgba(134, 251, 255, 0.507); */
     width: 80%;
     height: 70vh;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    margin: auto;
 }
 .left-col-contact, .right-col-contact{
     width: 100%;
@@ -470,3 +516,163 @@ form input{
 
 
 /* FOOTER */
+#footer{
+    /* background: #f67c92; */
+    padding: 50px 0px;
+} 
+hr{
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #f67c92;
+}
+.footer-row{
+    width: 80%;
+    height: 20vh;
+    margin: auto;
+    /* background: #d1d1d18f; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-left-col{
+    /* background: hsla(0, 0%, 82%, 0.561); */
+    flex-basis: 50%;
+    margin-top: 50px;
+}
+.footer-right-col{
+    /* background: #d1d1d18f; */
+    flex-basis: 35%;
+}
+.footer-links{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-right-info{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-logo img{
+    width: 100px;
+}
+.footer-logo button{
+    padding: 12px 38px;
+    margin-top: 20px;
+    font-size: 10px;
+}
+.copyright-text, .footer-logo{
+    flex-basis: 40%;
+}
+
+
+
+
+/* SOCIAL ICONS */
+.social-icons{
+    width: 25px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.social-icons img{
+    display: block;
+    width: 30px;
+    margin: 0 auto 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 770px){
+    #home{
+        background-image: none;
+    }
+    /* HOME */
+
+    .home-container{
+        /* background: rgba(170, 7, 162, 0.507); */
+        width: 75%;
+        height: 100vh;
+        margin: auto;
+    }
+    .logo{
+        width: 80px;
+        margin-top: 27px;
+        margin-left: 100px;
+    }
+    .info-box-homes{
+        /* background: rgba(173, 245, 255, 0.507); */
+        height: 50vh;
+        width: 100%;
+        margin-top: 5vh;
+    }
+    h1{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .info-box-homes button{
+            padding: 15px 40px;
+            background: transparent;
+            border: solid 3px #f67c92;
+            font-size: 16px;
+            outline: none;
+            border-radius: 5px;
+            margin: 30px 0;
+    }
+    .social-icons img{
+        width: 16px;
+        margin: 0 auto 20px;
+    }
+    
+    /* ABOUT */
+        
+    }
+    .left-col-about{
+        flex-basis: 100%;
+    }
+    .left-col-about img{
+        width: 100%;
+    }
+    .right-col-about{
+        flex-basis: 100%;
+        width: 100%;
+        height: 50vh;
+        text-align: right;
+    }
+    .info-box-about{
+        margin: 40px 10%;
+        display: inline-block;
+    }
+    .info-box-about h2{
+        margin-top: 70px;
+    }
+    .info-box-about h4{
+        margin-top: 20px;
+    }
+    #about, #offers{
+        /* background: rgba(173, 245, 255, 0.507); */
+        padding: 0px 0;
+    }
+    #features{
+        /* background: rgba(173, 245, 255, 0.507); */
+        padding: 100px 0;
+    }
+    
+
+
+
+     /* FEATURES */
+    .features-col{
+        /* background: rgba(196, 255, 173, 0.507); */
+        flex-basis: 10%;
+        text-align: center;
+    }
+}
